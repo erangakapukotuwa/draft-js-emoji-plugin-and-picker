@@ -15,12 +15,6 @@ import attachImmutableEntitiesToEmojis from './modifiers/attachImmutableEntities
 import defaultPositionSuggestions from './utils/positionSuggestions';
 import emojiList from './utils/emojiList';
 
-import Sticker from './Sticker';
-import StickerSelect from './StickerSelect';
-import stickerStyles from './stickerStyles.css';
-import selectStyles from './selectStyles.css';
-import selectStickerStyles from './selectStickerStyles.css';
-
 const defaultImagePath = '//cdn.jsdelivr.net/emojione/assets/svg/';
 const defaultImageType = 'svg';
 const defaultCacheBustParam = '?v=2.2.6';
@@ -39,17 +33,6 @@ const createEmojiPlugin = (config = {}) => {
     emojiSuggestionsEntryText: emojiSuggestionsEntryStyles.emojiSuggestionsEntryText,
     emojiSuggestionsEntryIcon: emojiSuggestionsEntryStyles.emojiSuggestionsEntryIcon,
     emojiSuggestionsEntryAvatar: emojiSuggestionsEntryStyles.emojiSuggestionsEntryAvatar,
-
-    select: selectStyles.select,
-    selectPopover: selectStyles.selectPopover,
-    selectClosedPopover: selectStyles.selectClosedPopover,
-    selectBottomGradient: selectStyles.selectBottomGradient,
-    selectButton: selectStyles.selectButton,
-    selectPressedButton: selectStyles.selectPressedButton,
-    selectStickerList: selectStyles.selectStickerList,
-
-    selectSticker: selectStickerStyles.selectSticker,
-    selectStickerImage: selectStickerStyles.selectStickerImage
   };
 
   const callbacks = {
@@ -132,16 +115,8 @@ const createEmojiPlugin = (config = {}) => {
     positionSuggestions,
     shortNames: List(keys(emojiList.list)),
   };
-
-  var stickerSelectProps = {
-    selectButtonContent,
-    theme,
-    store
-  };
-
   return {
     EmojiSuggestions: decorateComponentWithProps(EmojiSuggestions, emojiSearchProps),
-    EmojiPicker: decorateComponentWithProps(EmojiPicker, emojiSearchProps),
     decorators: [
       {
         strategy: emojiStrategy,
