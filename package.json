@@ -1,15 +1,15 @@
 {
   "name": "draft-js-emoji-plugin",
-  "version": "2.0.0-beta7",
-  "description": "Emoji Plugin for DraftJS",
+  "version": "1.0.0",
+  "description": "Created this package using the, Emoji Plugin for DraftJS as a test project. This is a try to add a picker to the emoji plugin",
   "author": {
-    "name": "Nik Graf",
-    "email": "nik@nikgraf.com",
-    "url": "http://www.nikgraf.com"
+    "name": "Eranga Lakmal",
+    "email": "kapukotuwa.eranga@gmail.com",
+    "url": "https://twitter.com/ErangaLakmal"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/draft-js-plugins/draft-js-plugins.git"
+    "url": "https://github.com/erangakapukotuwa/draft-js-emoji-plugin-and-picker.git"
   },
   "main": "lib/index.js",
   "keywords": [
